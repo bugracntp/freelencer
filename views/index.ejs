@@ -167,10 +167,10 @@
                                     <img class="img-fluid rounded mb-5" src="uploads/<%= posts[i].photo %>" alt="..." />
                                     <!-- Portfolio Modal - Text-->
                                     <p class="mb-4"><%= posts[i].description %></p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                    <a class="btn btn-danger" href="/<%= posts[i]._id %>?_method=DELETE">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Delete Post
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

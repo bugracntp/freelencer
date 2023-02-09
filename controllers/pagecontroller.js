@@ -30,7 +30,7 @@ exports.createPost = async (req, res) => {
 
 exports.deletePost = async (req, res)=>{
 	const post = await postModel.findOne({ _id: req.params.id });
-  let deletedImage = __dirname + "/../public/uploads/" + photo.photo;
+  let deletedImage = __dirname + "/../public/uploads/" + post.photo;
   fs.unlinkSync(deletedImage);
   await postModel.findByIdAndRemove(req.params.id);
   res.redirect(`/`);
